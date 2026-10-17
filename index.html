@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff7f2">
+<title>A Little Light for You</title>
+<style>
+  :root { --ink:#342a3d; --muted:#756a7d; --rose:#d9778c; --cream:#fff7f2; --lav:#f0e9ff; }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body {
+    margin:0; color:var(--ink); font-family: Georgia, "Times New Roman", serif;
+    background: radial-gradient(circle at 12% 12%, #ffe0e8 0, transparent 32%),
+                radial-gradient(circle at 90% 20%, #e6ddff 0, transparent 30%), var(--cream);
+  }
+  .wrap { width:min(960px, 92%); margin:auto; }
+  header { padding:24px 0; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+  .brand { font-size:1.05rem; letter-spacing:.08em; text-transform:uppercase; }
+  .pill { font: 600 .82rem Arial,sans-serif; color:#8b5262; border:1px solid #e9b8c5; padding:9px 13px; border-radius:999px; }
+  .hero { text-align:center; padding:62px 0 44px; }
+  .eyebrow { color:#b65e78; text-transform:uppercase; letter-spacing:.2em; font:700 .75rem Arial,sans-serif; }
+  h1 { font-size:clamp(2.6rem, 7vw, 5.6rem); line-height:.98; font-weight:normal; margin:20px auto; max-width:780px; }
+  .hero p { font:1.08rem/1.8 Arial,sans-serif; color:var(--muted); max-width:580px; margin:0 auto 26px; }
+  .button { display:inline-block; text-decoration:none; background:var(--ink); color:white; padding:14px 22px; border-radius:999px; font:600 .9rem Arial,sans-serif; }
+  .section-title { text-align:center; font-size:2rem; font-weight:normal; margin:12px 0 8px; }
+  .sub { text-align:center; color:var(--muted); font: .95rem/1.7 Arial,sans-serif; margin:0 auto 28px; }
+  .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; padding:12px 0 62px; }
+  .card { min-height:180px; padding:25px 22px; border-radius:22px; background:rgba(255,255,255,.72); border:1px solid rgba(217,119,140,.2); box-shadow:0 10px 30px rgba(78,45,69,.05); display:flex; flex-direction:column; justify-content:space-between; }
+  .card .symbol { color:var(--rose); font-size:1.5rem; }
+  .card p { font-size:1.18rem; line-height:1.5; margin:15px 0; }
+  .card small { color:var(--muted); font: .75rem Arial,sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+  .qr-section { margin:0 auto 64px; padding:34px; background:rgba(255,255,255,.78); border:1px solid #f0dce3; border-radius:28px; display:grid; grid-template-columns:1fr 220px; align-items:center; gap:30px; max-width:760px; }
+  .qr-section h2 { font-size:2rem; font-weight:normal; margin:0 0 10px; }
+  .qr-section p { font: .95rem/1.7 Arial,sans-serif; color:var(--muted); }
+  #qrcode { background:white; padding:12px; border-radius:14px; width:196px; min-height:196px; display:flex; align-items:center; justify-content:center; }
+  #qrcode img, #qrcode canvas { max-width:100%; height:auto; }
+  .qr-note { font: .75rem/1.5 Arial,sans-serif; color:#8b7d89; margin-top:10px; }
+  footer { text-align:center; padding:0 0 34px; color:var(--muted); font: .82rem Arial,sans-serif; }
+  @media (max-width:680px) {
+    header { padding:18px 0; } .hero { padding:48px 0 35px; }
+    .cards { grid-template-columns:1fr; } .card { min-height:145px; }
+    .qr-section { grid-template-columns:1fr; text-align:center; padding:26px 20px; }
+    #qrcode { margin:auto; }
+  }
+</style>
+</head>
+<body>
+  <header class="wrap">
+    <div class="brand">✦ A Little Light</div>
+    <div class="pill">A gentle reminder</div>
+  </header>
+
+  <main>
+    <section class="hero wrap">
+      <div class="eyebrow">For the days you need it</div>
+      <h1>There is still<br><em>beauty ahead.</em></h1>
+      <p>A small corner of the internet filled with kind words, quiet hope, and reminders that you matter more than you know.</p>
+      <a class="button" href="#messages">Read a little kindness ↓</a>
+    </section>
+
+    <section id="messages" class="wrap">
+      <h2 class="section-title">Words to keep close</h2>
+      <p class="sub">Take what you need today. Come back whenever you need a softer moment.</p>
+      <div class="cards">
+        <article class="card"><span class="symbol">✿</span><p>You do not have to bloom every day. Rest is part of becoming.</p><small>A reminder to breathe</small></article>
+        <article class="card"><span class="symbol">♡</span><p>Your presence can make someone’s ordinary day feel special.</p><small>You matter</small></article>
+        <article class="card"><span class="symbol">☼</span><p>Even the longest night gives way to morning. Keep going gently.</p><small>For hope</small></article>
+        <article class="card"><span class="symbol">✧</span><p>You are allowed to begin again, as many times as you need.</p><small>Fresh starts</small></article>
+        <article class="card"><span class="symbol">❀</span><p>Speak to yourself with the same kindness you offer the people you love.</p><small>Be kind to you</small></article>
+        <article class="card"><span class="symbol">☾</span><p>You do not need to have everything figured out to take the next step.</p><small>One step at a time</small></article>
+        <article class="card"><span class="symbol">♡</span><p>Some of the most beautiful things grow quietly, where nobody can see.</p><small>Trust your pace</small></article>
+        <article class="card"><span class="symbol">✦</span><p>May you find people who feel like peace and moments that feel like home.</p><small>A wish for you</small></article>
+        <article class="card"><span class="symbol">❋</span><p>Small progress is still progress. Give yourself credit for showing up.</p><small>Keep going</small></article>
+      </div>
+    </section>
+
+    <section class="qr-section wrap">
+      <div>
+        <div class="eyebrow">Share the good feeling</div>
+        <h2>Send a little light.</h2>
+        <p>Scan this QR code with another phone to open these messages. Once you publish this page, the code will automatically use its live website address.</p>
+        <div class="qr-note" id="qrstatus">The QR code needs the page to be opened from its published website address.</div>
+      </div>
+      <div id="qrcode" aria-label="QR code linking to this website's messages"></div>
+    </section>
+  </main>
+  <footer class="wrap">Made with a little kindness, for whoever needs it. ✦</footer>
+
+<script>
+(function () {
+  const box = document.getElementById('qrcode');
+  const status = document.getElementById('qrstatus');
+  const target = window.location.href.split('#')[0] + '#messages';
+  if (window.location.protocol === 'file:') {
+    box.innerHTML = '<div style="font:12px Arial,sans-serif;text-align:center;color:#756a7d;padding:12px">Publish this page to create your working QR code.</div>';
+    status.textContent = 'After publishing, reopen the live website and the QR code will appear here.';
+    return;
+  }
+  const script = document.createElement('script');
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js';
+  script.onload = function () {
+    new QRCode(box, { text: target, width: 172, height: 172, colorDark: '#342a3d', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.H });
+    status.textContent = 'QR code links to: ' + target;
+  };
+  script.onerror = function () {
+    status.textContent = 'Could not load the QR generator. Check your internet connection and refresh.';
+  };
+  document.head.appendChild(script);
+})();
+</script>
+</body>
+</html>
